@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import ChatInterface from '@/components/ChatInterface';
 import SimulatorContainer from '@/components/SimulatorContainer';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 type MessageType = {
   content: React.ReactNode;
@@ -105,6 +107,14 @@ const Index = () => {
           <p className="text-gray-600 mt-2">
             Sistema de automação para atendimento de interessados em lojas comerciais
           </p>
+          
+          <div className="mt-6">
+            <Link to="/glitch">
+              <Button variant="outline" className="bg-white">
+                Tutorial: Como hospedar no Glitch
+              </Button>
+            </Link>
+          </div>
         </div>
         
         <SimulatorContainer>
